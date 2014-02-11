@@ -40,7 +40,8 @@
     }
     
         
-    .nav-menu .nav-primary.expanded #portal-globalnav li a {
+    .nav-menu .nav-primary.expanded #portal-globalnav li a,
+    .nav-menu .nav-primary.expanded #portal-megamenu li a {
         *min-width: 94%;
     }
 }

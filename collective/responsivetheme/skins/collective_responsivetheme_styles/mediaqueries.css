@@ -101,24 +101,24 @@
        }
 
    /* global navigation needs to reconfigure itself to be vertical */
-  #portal-globalnav {
+  #portal-globalnav, #portal-megamenu {
         margin-left: 0px !important;
         }
                 
-    ul#portal-globalnav {
+    ul#portal-globalnav, ul#portal-megamenu {
         padding: 0px;
         background-color: white !important;
         background: white !important;
         width: 100% !important;
         }
         
-    ul#portal-globalnav:before { 
+    ul#portal-globalnav:before, ul#portal-megamenu:before { 
         display: block;
         margin-top: 20px;
         font-size: 2em; 
         }
          
-    #portal-globalnav {
+    #portal-globalnav, #portal-megamenu {
         height: auto;
         clear: both;
         padding: 0px;
@@ -126,7 +126,7 @@
         width: 100% !important;
         }
         
-    #portal-globalnav li {
+    #portal-megamenu li{
         display: list-item !important;
         margin-top: 5px;
         border-top: 1px solid #E7E7E7;
@@ -134,14 +134,14 @@
         background-color: white;
         width: 100%;
         }
-   .nav-menu .nav-primary.expanded #portal-globalnav li, .nav-menu .nav-primary #portal-globalnav li.navigation-pulldown { display: list-item !important; }
-   .nav-menu .nav-primary #portal-globalnav li { display: none !important; }
-   #portal-globalnav li.navigation-pulldown {
+   .nav-menu .nav-primary.expanded #portal-globalnav li, .nav-menu .nav-primary.expanded #portal-megamenu li, .nav-menu .nav-primary #portal-globalnav li.navigation-pulldown,.nav-menu .nav-primary #portal-megamenu li.navigation-pulldown { display: list-item !important; }
+   .nav-menu .nav-primary #portal-globalnav li, .nav-menu .nav-primary #portal-megamenu li  { display: none !important; }
+   #portal-globalnav li.navigation-pulldown, #portal-megamenu li.navigation-pulldown {
        padding: 0.5em 1em 2em;
        background-color: #E3E3E3;
        }
        
-   #portal-globalnav li a {
+   #portal-globalnav li a,#portal-megamenu li a  {
         padding: 13px 13px 13px 20px;
         display: block !important;
         text-align: left !important;
@@ -246,21 +246,21 @@
        }     
     
     
-   #portal-globalnav { margin-left: 0px !important; }
+   #portal-globalnav, #portal-megamenu  { margin-left: 0px !important; }
                 
-   ul#portal-globalnav {
+   ul#portal-globalnav,ul#portal-megamenu {
         padding: 0px;
         background-color: transparent;
         width: 100% !important;
         }
         
-     ul#portal-globalnav:before { 
+     ul#portal-globalnav:before, ul#portal-megamenu:before { 
         display: block;
         margin-top: 20px;
         font-size: 2em; 
         }
         
-    #portal-globalnav {
+    #portal-globalnav,  #portal-megamenu {
         height: auto;
         clear: both;
         padding: 0px;
@@ -268,7 +268,7 @@
         width: 100% !important;
         }
         
-   #portal-globalnav li {
+   #portal-globalnav li, #portal-megamenu li  {
         display: inline-block !important; 
         margin-top: 4px;
         border-top: 1px solid #E7E7E7;
@@ -278,7 +278,7 @@
         }
 
         
-    #portal-globalnav li a {
+    #portal-globalnav li a, #portal-megamenu li a {
         padding: 13px 13px 13px 20px;
         display: block !important;
         }

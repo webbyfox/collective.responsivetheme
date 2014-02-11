@@ -73,7 +73,8 @@ div.expanded button.navigation-button {
 }
 
 
-.nav-menu .nav-primary #portal-globalnav li:last-child, .nav-menu .nav-primary #portal-globalnav li:last-child a {
+.nav-menu .nav-primary #portal-globalnav li:last-child, .nav-menu .nav-primary #portal-globalnav li:last-child a,
+.nav-menu .nav-primary #portal-megamenu li:last-child, .nav-menu .nav-primary #portal-megamenu li:last-child a {
     -webkit-border-bottom-right-radius: 9px;
     -webkit-border-bottom-left-radius: 9px;
     -moz-border-radius-bottomright: 9px;
@@ -88,7 +89,7 @@ div.expanded button.navigation-button {
     width: auto !important;
 }
 
-.nav-menu .nav-primary.expanded #portal-globalnav li {
+.nav-menu .nav-primary.expanded #portal-globalnav li, .nav-menu .nav-primary.expanded #portal-megamenu li {
     display: list-item !important;
     background-color: #062946;
     width: 98%;

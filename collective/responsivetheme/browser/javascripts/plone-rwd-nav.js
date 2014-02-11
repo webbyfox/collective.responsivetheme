@@ -8,10 +8,10 @@
 
 function below_610(){
       // on load add the li if less than 610 px wide and the nav-menu class
-      if(window.location.hash != '#portal-globalnav') {
+      if(window.location.hash != '#portal-megamenu') {
         if ($(window).width() < 610) {
-            var showNavigationLabel = _('Show Navigation');
-            var hideNavigationLabel = _('Hide Navigation');  
+            var showNavigationLabel = _('Menu');
+            var hideNavigationLabel = _('Hide Menu ');  
             
             //$("#portal-globalnav").prepend('<li class="navigation-pulldown">Navigation</li>');
             
@@ -22,13 +22,13 @@ function below_610(){
             if ($('.nav-primary').hasClass('expanded')) {
                    initialNavigationLabel = hideNavigationLabel;
             }                   
-            $("#portal-globalnav").prepend('<button type="button" class="navigation-button">' + initialNavigationLabel + '</button>');
-            $('#portal-top').addClass('nav-menu');
+            $(".nav-primary").prepend('<button type="button" class="navigation-button">' + initialNavigationLabel + '</button>');
+            $("#portal-top-megamenu").addClass('nav-menu');
             $(".nav-primary").prepend('<span class="nav-section" />');
             // toggle the menu items' visiblity. it gives the parent the class .expanded
             $('.nav-primary').find('span.nav-section').bind('click focus', function(){
                 $(this).parent().toggleClass('expanded');
-               // always show right Navigation label for button, even in rare situations...               
+               // always show right Navigation label for but Menu ton, even in rare situations...               
                 if ($('.nav-primary').hasClass('expanded')) {
                     $(this).parent().find('button.navigation-button').text(hideNavigationLabel);
                 } else {
@@ -53,7 +53,7 @@ $(document).ready(function() {
         jarn.i18n.loadCatalog('collective.responsivetheme');
         _ = jarn.i18n.MessageFactory('collective.responsivetheme');
          // add a div around globalnav
-        $('ul#portal-globalnav').wrap('<div class="nav-primary" />');
+        $('ul#portal-megamenu').wrap('<div class="nav-primary" />');
         if ( $(".navigation-button").length == 0 ) {
             below_610();
         }
@@ -69,7 +69,7 @@ $(document).ready(function() {
             if ($(window).width() > 610) {
                  // check and see if .navigation-button is there.. if so remove it
                  if ( $(".navigation-button").length > 0 ) {
-                     $('#portal-top').removeClass('nav-menu'); 
+                     $('#portal-top-megamenu').removeClass('nav-menu'); 
                      $('.navigation-button').remove();
                      $('.nav-section').remove();
                  }
