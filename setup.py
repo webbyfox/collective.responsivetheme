@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.5.2'
+version = '1.5.3'
 
 setup(name='collective.responsivetheme',
       version=version,
@@ -27,7 +27,7 @@ setup(name='collective.responsivetheme',
           'setuptools',
           'plonetheme.sunburst',
           'z3c.jbot>=0.6.0',
-          'jarn.jsi18n',
+          #'jarn.jsi18n',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
