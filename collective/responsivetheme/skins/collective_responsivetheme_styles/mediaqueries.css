@@ -12,11 +12,13 @@
     
     /* for readability making the width of the site only got to 100em */ 
     #visual-portal-wrapper {
-        width: 100em !important;
+        width: 960px !important;
         margin: 0px auto !important;
         display: block;
         float: none;
     }
+
+
 
 } /*  *  END 1625px and above huge screens * */
 
@@ -27,11 +29,20 @@
     }
 }
 
+
+
+
+
+
+
+
 /*  * 600px and below-common things for 480px, 600px, and below .. IE 9 ignored this if it had 'only screen' in the query * */
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 768px) {
     /* reset the min width to be 320px */
     body { min-width: 320px !important;}
-    #visual-portal-wrapper { width: 100% !important;}
+    #visual-portal-wrapper, #portal-top-wrapper, #portal-top { width: 99.5% !important;}
+#portal-top {  display: inline-block;}
+
     div#logo {
         position: absolute;
         top: 15px !important;
@@ -43,8 +54,94 @@
        display: inline-block;
        clear: both;
        margin: 0px;
+       float: left;
+       width: 40%;
        }
        
+div#home-intro.grid_3, div#home-news.grid_1{
+  height: auto !important;
+  padding-bottom: 20px !important;
+}
+
+
+#portal-megamenu li.top-level .sub {
+  display: none !important;
+}
+
+
+    #portal-megamenu li a.menu-item, #portal-megamenu li a.menu-item:hover {
+padding: 5% !important;
+height: 5% !important;
+width: 90% !important;
+
+}
+
+#portal-searchbox #searchGadget {
+font-size: 2em;
+width: 70%;
+height: 40px;
+padding-right: 50px;
+}
+
+div.LSBox .searchButton {
+top: 15px;
+left: -34px;
+}
+
+
+
+#homepage div.grid_1, 
+#homepage div.grid_2, 
+#homepage div.grid_3, 
+#homepage div.grid_4 {
+  width: 98%;
+  float: left;
+  margin-bottom: 5%;
+}
+
+#homepage div.grid_1, 
+#homepage div.grid_2, 
+#homepage div.grid_3, 
+#homepage div.grid_4 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 5%;
+}
+
+#home-news{
+  height: auto !important;
+  margin-bottom: 2%;
+}
+#news-items{
+  display: block;
+margin-bottom: 10%;
+}
+
+#home-intro {
+height: auto;
+}
+
+#home-intro img{
+  display: none;
+}
+
+#icon-blog span, 
+#icon-forum span, 
+#icon-iscp span, 
+#icon-docs span {
+font-size: 1.5em;
+}
+
+.portal-footerlinks-column{
+  width: 98% !important;
+  margin-left: 5% !important;
+  line-height: 2em;
+}
+
+.portal-footerlinks-column a {
+font-size: 16px !important;
+}
+
     /* make width 100% instead of the stock 97.75% */
     div.width-full {
         width: 100% !important;
@@ -53,6 +150,7 @@
     /* start position-0 at absolute left */
     div.position-0 {
         margin-left: -100%;
+
         }
 
     /* get rid of whatever width is set on visual-portal-wrapper so it expands whole device width */
@@ -60,6 +158,8 @@
         border: none;
         -webkit-box-shadow: none;
         box-shadow: none;
+                display: block !important;
+        float: left !important;
         }
         
     /* move columns to below main content */    
@@ -73,7 +173,7 @@
         
     /* spread out the content */
     div#portal-column-content {
-        width: 94%;
+        width: 99%;
         margin-left: -99%;
         }
         
@@ -84,11 +184,12 @@
        
     /* move search box to the center and expand its width */   
     #portal-searchbox {
-        margin: 65px 17% 15px 17% !important; /* different from the diazo theme since I can reorder when logo and searchbox come in the html. May consider moving to it's own CSS file so I don't have to maintain two products as much */
-        width: 60%;
+        margin: 3% 0 0 0  !important; /* different from the diazo theme since I can reorder when logo and searchbox come in the html. May consider moving to it's own CSS file so I don't have to maintain two products as much */
+        width: 100%;
         font-size: 0.7em !important;
         clear: both !important;
         float: left !important;
+        left: 2%;
         }
     
     #searchGadget {
@@ -124,8 +225,15 @@
         padding: 0px;
         margin: 7px auto;
         width: 100% !important;
+
         }
         
+div.nav-primary.expanded{
+
+}
+
+
+
     #portal-megamenu li{
         display: list-item !important;
         margin-top: 5px;
@@ -134,7 +242,11 @@
         background-color: white;
         width: 100%;
         }
-   .nav-menu .nav-primary.expanded #portal-globalnav li, .nav-menu .nav-primary.expanded #portal-megamenu li, .nav-menu .nav-primary #portal-globalnav li.navigation-pulldown,.nav-menu .nav-primary #portal-megamenu li.navigation-pulldown { display: list-item !important; }
+   .nav-menu .nav-primary.expanded #portal-globalnav li, 
+   .nav-menu .nav-primary.expanded #portal-megamenu li, 
+   .nav-menu .nav-primary #portal-globalnav li.navigation-pulldown,
+   .nav-menu .nav-primary #portal-megamenu li.navigation-pulldown 
+   { display: list-item !important; }
    .nav-menu .nav-primary #portal-globalnav li, .nav-menu .nav-primary #portal-megamenu li  { display: none !important; }
    #portal-globalnav li.navigation-pulldown, #portal-megamenu li.navigation-pulldown {
        padding: 0.5em 1em 2em;
@@ -146,6 +258,8 @@
         display: block !important;
         text-align: left !important;
         }
+
+
 
 
 /* luke w says breadcrumbs are not found in mobile designs */    
@@ -223,11 +337,20 @@
 
 
 
-/*  * iPhone * */
-@media screen and (orientation:landscape) and (max-device-width: 480px), screen and (orientation:portrait) and  (max-device-width: 320px) {
-/** it seems when changing the orientation on the iphone it loses things like globalnav being display block. Have to reset some css that should of been used from before **/
-   body { display: inline !important; }
+
+
+
+
+
+
+
+/*  * iPhone portrait * */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+/** it seems when changing the orientation on the iphone it loses things like globalnav being display block. Have to reset some css that should of been used from before **/   body { display: inline !important; }
    /* global navigation needs to reconfigure itself to be vertical */
+
+#portal-top {  display: inline-block;}
 
      #portal-logo {
         display: inline-block;
@@ -245,7 +368,26 @@
        width: 80% !important;
        }     
     
-    
+#portal-logo img { 
+   -webkit-transform:scale(0.9) !important;
+    -moz-transform:scale(0.9);
+    -o-transform:scale(0.9);
+  }
+
+div#home-intro.grid_3, div#home-news.grid_1{
+  height: auto !important;
+  padding-bottom: 20px !important;
+}
+
+button.navigation-button {
+height: 45px;
+
+}
+
+    div.nav-primary.expanded{
+      display: block !important;
+    }
+
    #portal-globalnav, #portal-megamenu  { margin-left: 0px !important; }
                 
    ul#portal-globalnav,ul#portal-megamenu {
@@ -299,8 +441,467 @@
         margin-left: 2px;
         font-size: 0.05em;
     }
+
+#content p {
+line-height: 34px !important;
+font-size: 0.92em !important;
+}
+
+   #content h1 { font-size: 1.4em !important;}
+   #content h2 { font-size: 1.2em !important;}
+   #content h3 { font-size: 1.1em !important;}
+
+   div#copyright p{
+    font-size: 80% !important;
+    padding:0 10px 10px 10px !important;
+   }
+
 } /*  * END iPhone * */
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  * iPhone landscape * */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
+/** it seems when changing the orientation on the iphone it loses things like globalnav being display block. Have to reset some css that should of been used from before **/
+
+
+   body { display: inline !important;
+         
+    }
+   /* global navigation needs to reconfigure itself to be vertical */
+
+
+
+#portal-top {  display: inline-block; width: 95% !important;}
+
+     #portal-logo {
+        display: inline-block;
+        } 
+
+      div#logo {
+        position: absolute;
+        top: 15px !important;
+        display: inline-block;
+        width: 94%;
+        }   
+   #portal-logo {
+       margin-left: 30px;
+       display: inline-block;
+       clear: both;
+       margin: 0px;
+       float: left;
+       width: 90%;
+       }   
+    
+
+div#home-intro.grid_3, div#home-news.grid_1{
+  height: auto !important;
+  padding-bottom: 20px !important;
+}
+
+
+    div.nav-primary.expanded{
+      display: block !important;
+    }
+
+   #portal-globalnav, #portal-megamenu  { margin-left: 0px !important; }
+                
+   ul#portal-globalnav,ul#portal-megamenu {
+        padding: 0px;
+        background-color: transparent;
+        /*width: 100% !important;*/
+        }
+        
+     ul#portal-globalnav:before, ul#portal-megamenu:before { 
+        display: block;
+        margin-top: 20px;
+        font-size: 2em; 
+        }
+        
+    #portal-globalnav,  #portal-megamenu {
+        height: auto;
+        clear: both;
+        padding: 0px;
+        margin: 7px auto;
+        width: 100% !important;
+        }
+        
+   #portal-globalnav li, #portal-megamenu li  {
+        display: inline-block !important; 
+        margin-top: 4px;
+        border-top: 1px solid #E7E7E7;
+        border-bottom: 1px solid #E7E7E7;
+        background-color: white;
+        /*width: 100%;*/
+        }
+
+        
+    #portal-globalnav li a, #portal-megamenu li a {
+        padding: 13px 13px 13px 20px;
+        display: block !important;
+        }
+
+        #portal-searchbox #searchGadget {
+font-size: 2em;
+width: 70%;
+height: 40px;
+padding-right: 50px;
+float: left;
+}
+
+div.LSBox .searchButton {
+top: 15px;
+left: -34px;
+}
+
+
+
+#homepage div.grid_1, 
+#homepage div.grid_2, 
+#homepage div.grid_3, 
+#homepage div.grid_4 {
+  width: 98%;
+  float: left;
+  margin-bottom: 5%;
+}
+
+#homepage div.grid_1, 
+#homepage div.grid_2, 
+#homepage div.grid_3, 
+#homepage div.grid_4 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 5%;
+}
+
+#home-news{
+  height: auto !important;
+  margin-bottom: 2%;
+}
+#news-items{
+  display: block;
+margin-bottom: 10%;
+}
+
+#home-intro {
+height: auto;
+}
+
+#home-intro img{
+  display: none;
+}
+
+#icon-blog span, 
+#icon-forum span, 
+#icon-iscp span, 
+#icon-docs span {
+font-size: 1.5em;
+}
+    
+    .field input[type="text"][size] {
+        width: 10em;
+        } 
+ 
+    div#content-core form#searchform.searchPage fieldset#search-field { 
+        width: 100% !important; 
+        padding: 0px;
+        }
+    fieldset#search-field input.searchPage:first-child {
+        width: 50% !important;
+        }
+    input.searchPage.searchButton {
+        width: 45% !important;
+        margin-left: 2px;
+        font-size: 0.05em;
+    }
+
+    
+.portal-footerlinks-column{
+  width: 38% !important;
+  margin-left: 5% !important;
+  line-height: 2em;
+}
+
+.portal-footerlinks-column  {
+font-size: 20px !important;
+}
+
+#content{
+  font-size: 70% !important;
+}
+
+div.row {
+float: left;
+width: 100%;
+display: block;
+position: relative;
+
+
+}
+
+
+div#copyright p{
+ font-size:80% !important; 
+ margin: 0 !important;
+}
+
+} /*  * END iPhone * */
+
+
+
+
+/*  *iPad in landscape mode * */
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and  (orientation:landscape) {
+  /*  
+
+    #portal-columns {
+    background: green !important;
+    }
+  */
+
+   /* start position-0 at absolute left */
+    div.position-0 {
+        margin-left: -100%;
+        }
+
+
+}/*  * END Pad in landscape mode * */
+
+
+
+
+
+/*  * iPad in portrait mode * */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 960px) and (orientation : portrait) {
+
+/*
+#portal-columns {
+background: purple !important;
+}
+*/
+
+    /* reset the min width to be 320px */
+    body { min-width: 320px !important; }
+
+#visual-portal-wrapper, #portal-top-wrapper { width: 99.5% !important;}
+#portal-top {  
+  display: inline-block;
+  width: 98.5% !important;
+  margin-left: 1% !important; 
+}
+
+    div#logo {
+        position: absolute;
+        top: 15px !important;
+        display: inline-block;
+        width: 44%;
+        float: right !important;
+        }   
+   #portal-logo {
+       margin-left: 30px;
+       display: inline-block;
+       clear: both;
+       margin: 0px;
+       float: left;
+       width: 40%;
+       }
+       
+
+#portal-megamenu li.top-level .sub {
+  display: none !important;
+}
+
+#portal-top-megamenu {
+height: 82px !important;
+}
+
+    #portal-megamenu li a.menu-item, #portal-megamenu li a.menu-item:hover {
+padding: 5% !important;
+height: 55px !important;
+width: 140px !important;
+
+}
+
+#portal-searchbox #searchGadget {
+font-size: 2em;
+width: 70%;
+height: 40px;
+padding-right: 50px;
+}
+
+div.LSBox .searchButton {
+top: 15px;
+left: -34px;
+}
+
+
+
+#homepage div.grid_1, 
+#homepage div.grid_2, 
+#homepage div.grid_3, 
+#homepage div.grid_4 {
+  width: 99%;
+  float: left;
+  margin-bottom: 5%;
+}
+
+#homepage div.grid_1, 
+#homepage div.grid_2, 
+#homepage div.grid_3, 
+#homepage div.grid_4 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 5%;
+}
+
+#home-news{
+  height: auto !important;
+  margin-bottom: 2%;
+}
+#news-items{
+  display: block;
+margin-bottom: 10%;
+}
+
+#home-intro {
+height: auto;
+}
+
+#home-intro img{
+  display: none;
+}
+
+#icon-blog span, 
+#icon-forum span, 
+#icon-iscp span, 
+#icon-docs span {
+font-size: 1.5em;
+}
+
+.portal-footerlinks-column{
+  width: 98% !important;
+  margin-left: 5% !important;
+  line-height: 2em;
+}
+
+.portal-footerlinks-column a {
+font-size: 16px !important;
+}
+
+    /* make width 100% instead of the stock 97.75% */
+    div.width-full {
+        width: 100% !important;
+        }
+        
+    /* start position-0 at absolute left */
+    div.position-0 {
+        margin-left: -100%;
+
+        }
+
+    /* get rid of whatever width is set on visual-portal-wrapper so it expands whole device width */
+    #visual-portal-wrapper {
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+                display: block !important;
+        float: left !important;
+        }
+        
+    /* move columns to below main content */    
+    #portal-column-two, #portal-column-one {
+        clear: both;
+        margin-left: -99% !important;
+        width: 100% !important;
+        margin:1em 0px;
+        width: 99% !important;
+        } 
+        
+    /* spread out the content */
+    div#portal-column-content {
+        width: 98.5%;
+        margin-left: -99%;
+        }
+        
+    dl#portal-personaltools {
+        margin-right: 34px;
+        float: right;
+        }
+       
+    /* move search box to the center and expand its width */   
+    #portal-searchbox {
+        margin: 3% 0 0 0  !important; /* different from the diazo theme since I can reorder when logo and searchbox come in the html. May consider moving to it's own CSS file so I don't have to maintain two products as much */
+        width: 30%;
+        font-size: 0.7em !important;
+        clear: both !important;
+        float: left !important;
+        left: 2%;
+        }
+    
+    #searchGadget {
+        width: 81%;
+        }
+    .searchform #searchString { width: 211px; }
+    
+    #portal-personaltools {
+       font-size: 70%;
+       }
+
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+  font-size: 103% !important;
+  line-height: 200% !important;
+}
+
+       .portletNavigationTree .navTreeItem a{
+
+font-size: 22px !important;
+}
+
+   #content h1 { font-size: 1.8em !important;}
+   #content h2 { font-size: 1.6em !important;}
+   #content h3 { font-size: 1.4em !important;}
+
+#portal-megamenu {
+width: 100% !important;
+  font-size: 14px !important;
+height: 75px !important;
+}
+
+#portal-megamenu li a.menu-item {
+/*line-height: 200% !important;*/
+padding: 17px 0 0px 0;
+background: #2D2D2D;
+/* border-right: 0.1em solid #FFF; */
+/*width: 134px !important;*/
+}
+
+.portal-footerlinks-column{
+  width: 43% !important;
+  margin-left: 5% !important;
+  line-height: 2em;
+  font-size: 120% !important;
+}
+
+.portal-footerlinks-column a {
+  font-size: 90% !important;
+}
+
+} /*  * END iPad in portrait mode * */
 

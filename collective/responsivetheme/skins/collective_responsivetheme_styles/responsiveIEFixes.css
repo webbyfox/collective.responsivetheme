@@ -24,7 +24,7 @@
 */
      #portal-column-content, #portal-column-one, #portal-column-two { 
         *width: 100% !important;
-        }
+     }
         
     #portal-searchbox {
         *margin-bottom: 0px !important;

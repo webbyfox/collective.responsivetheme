@@ -8,11 +8,15 @@
 
 /* drop down menu formatting when all menu items won't fit in a single line */
 .nav-menu .nav-primary {
-   margin: 45px 0em 0em;
+   margin: 0px 0em 0em;/*margin: 45px 0em 0em;*/
    position: relative;
    overflow: hidden;
    clear: both;
+   display: block !important;
+   z-index: 10;
 }
+
+
 
 
 
@@ -34,7 +38,8 @@
 }    
 .nav-menu .nav-primary.expanded li,
 .nav-menu .nav-primary li.navigation-pulldown {
-   display: list-item;
+   display: inline-block;
+
 } 
 .nav-menu .nav-primary li.navigation-pulldown {
    border-bottom-width: 0;
@@ -44,16 +49,18 @@
 }
 
 button.navigation-button {
-    width: 98%; 
-    font-size: 1.5em; 
+    width: 28%; 
+    font-family: 'open_sansbold', 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 1em; 
     border: 1px solid #062946;
-    background-color: #2586D9;
+    background-color: #94C01C;
     color: #FFFFFF;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
-    margin: 16px 1% 0px;
-    height: 44px;
+    margin: 16px 4% 0px;
+    height: 34px;
+    text-transform: uppercase;
  }
 
 div.expanded button.navigation-button {
@@ -75,12 +82,7 @@ div.expanded button.navigation-button {
 
 .nav-menu .nav-primary #portal-globalnav li:last-child, .nav-menu .nav-primary #portal-globalnav li:last-child a,
 .nav-menu .nav-primary #portal-megamenu li:last-child, .nav-menu .nav-primary #portal-megamenu li:last-child a {
-    -webkit-border-bottom-right-radius: 9px;
-    -webkit-border-bottom-left-radius: 9px;
-    -moz-border-radius-bottomright: 9px;
-    -moz-border-radius-bottomleft: 9px;
-    border-bottom-right-radius: 9px;
-    border-bottom-left-radius: 9px;    
+
 }
 
 

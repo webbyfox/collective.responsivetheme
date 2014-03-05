@@ -9,7 +9,7 @@
 function below_610(){
       // on load add the li if less than 610 px wide and the nav-menu class
       if(window.location.hash != '#portal-megamenu') {
-        if ($(window).width() < 610) {
+        if ($(window).width() < 768) {
             var showNavigationLabel = _('Menu');
             var hideNavigationLabel = _('Hide Menu ');  
             
@@ -59,14 +59,14 @@ $(document).ready(function() {
         }
         $(window).resize(function() {
             // if window is smaller than 610px put in the extra li
-            if ($(window).width() <= 610) { 
+            if ($(window).width() <= 768) { 
                  // check to see if we have this particular li.. if not add it
                  if ( $(".navigation-button").length == 0 ) {
                    below_610(); 
                  }
              } 
             // if window is bigger take away li
-            if ($(window).width() > 610) {
+            if ($(window).width() > 768) {
                  // check and see if .navigation-button is there.. if so remove it
                  if ( $(".navigation-button").length > 0 ) {
                      $('#portal-top-megamenu').removeClass('nav-menu'); 
